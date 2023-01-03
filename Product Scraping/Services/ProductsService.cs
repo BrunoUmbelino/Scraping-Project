@@ -20,11 +20,10 @@ namespace Product_Scraping.Services
 
         public async Task<Product?> GetAsync(long code) => await _products.Find(p => p.Code == code).FirstOrDefaultAsync();
 
-        public async Task<List<Product>> CreateManyAsync(List<Product> products)
+        public async Task CreateManyAsync(List<Product> products)
         {
             _products.DeleteMany((_) => true);
             await _products.InsertManyAsync(products);
-            return products;
         }
     }
 }
