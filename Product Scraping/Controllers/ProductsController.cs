@@ -15,14 +15,14 @@ namespace Product_Scraping.Controllers
 
         public ProductsController(ProductsService productsService) => _productsService = productsService;
 
-        // GET: /<Products>
         [HttpGet]
-        public async Task<List<Product>> Get()
+        public async Task<List<Product>> Get(int pageIndex = 1)
         {
-            return await _productsService.GetAllAsync();
+            var pageSize = 10;
+            return await _productsService.GetAllAsync(pageIndex, pageSize);
         }
 
-        // GET /<Products>/5
+ 
         [HttpGet("{code}")]
         public async Task<ActionResult<Product>> Get(long code)
         {

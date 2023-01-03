@@ -16,14 +16,25 @@ namespace Product_Scraping.Services
             _products = database.GetCollection<Product>(dbSettings.Value.ProductsCollectionName);
         }
 
-        public async Task<List<Product>> GetAllAsync() => await _products.Find(_ => true).ToListAsync();
+        public async Task<List<Product>> GetAllAsync(int pageIndex, int pageSize)
+        {
+            var skipNum = pageIndex <= 1 ? 0 : (pageIndex-1) * pageSize;
+            return await _products.Find(_ => true).Skip(skipNum).Limit(pageSize).ToListAsync();
+        }
+            
 
         public async Task<Product?> GetAsync(long code) => await _products.Find(p => p.Code == code).FirstOrDefaultAsync();
 
-        public async Task CreateManyAsync(List<Product> products)
+        public async Task<List<Product>> CreateManyAsync(List<Product> products)
         {
-            _products.DeleteMany((_) => true);
-            await _products.InsertManyAsync(products);
+            foreach (var product in products)
+            {
+                product.Status = Status.Imported;
+                product.ImportedT = DateTime.Now;
+                await _products.InsertOneAsync(product);
+            }
+
+            return products;
         }
     }
 }
