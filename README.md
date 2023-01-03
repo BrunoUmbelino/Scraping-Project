@@ -1,6 +1,6 @@
 # Scraping Project (Backend Challenge 20220626)
 
-Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts" e disponibiliza os dados em uma Web API.
+Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts", salva os dados em um banco e disponibiliza através de uma Web API.
 
 ### Tecnologias
 
