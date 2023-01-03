@@ -1,6 +1,4 @@
-﻿using Microsoft.OpenApi.Any;
-using Product_Scraping.Models;
-using Product_Scraping.Services;
+﻿using Product_Scraping.Services;
 using Quartz;
 using System.Diagnostics;
 

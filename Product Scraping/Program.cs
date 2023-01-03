@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Options;
-using MongoDB.Driver;
 using Product_Scraping.Jobs;
 using Product_Scraping.Models.Database;
 using Product_Scraping.Services;
@@ -18,7 +16,7 @@ internal class Program
         builder.Services.AddSingleton<ScrapingService>();
 
         builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
@@ -31,7 +29,7 @@ internal class Program
             q.AddTrigger(opts => opts
                 .ForJob(jobKey)
                 .WithIdentity("ScrapingJob-trigger")
-                .WithCronSchedule("0 * * ? * *")); /// Cron expression 0 0 2 ? * * *
+                .WithCronSchedule("0 0 2 ? * * *"));
         });
 
         builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
@@ -39,7 +37,6 @@ internal class Program
         var app = builder.Build();
 
 
-        // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
