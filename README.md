@@ -2,7 +2,7 @@
 
 Este projeto é a implementa de um teste técnico, ele realiza o Web Scraping automatizado do portal "Open Food Facts", e disponibiliza os dados em uma API.
 
-### Técnologias
+### Tecnologias
 
 * .Net Framework 6
 * C# 
