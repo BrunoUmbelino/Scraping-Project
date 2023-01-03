@@ -12,5 +12,12 @@ Adicionei o Service que interage com o banco e configurei as injeções de depen
 Criei uma Service para o Scraping e extrai o código do Controller <br>
 Cometi o deslize de juntar muitos arquivos para commitar e também não havia criado o gitignore <br>
 Criei o gitignore e Commitei todos os aquivos no Github <br>
+Pesquisei sobre como automatizar o processo de Scraping e descobri oque era CRON <br>
+Descobri a lib Quatz.Net que ajuda a implementar o Job e configurar o Trigger, testei e funcionou <br>
+Transferi o código de Scraping que anteriormente era ativado por uma Controller para o Job e deletei o Controller <br>
+Implementei a paginação no endpoint de Produtos 
+Refatorei o código com uma atenção especial no ScrapingService <br>
 
+Obs. não consegui implementar o passo "Para gerar a URL das imagens, revisar o How to do projeto em: https://wiki.openfoodfacts.org/Developer-How_To",
+a, os links da documentação me respondem erro 403.
 
