@@ -4,7 +4,7 @@ Este projeto é a implementa de um teste técnico, ele realiza o Web Scraping au
 
 ### Tecnologias
 
-* .Net Framework 6
+* ASP.NET Core Web API (.Net Framework 6)
 * C# 
 * Quartz.Net (Jobs em CRON)
 * Selenium + Google Chrome
