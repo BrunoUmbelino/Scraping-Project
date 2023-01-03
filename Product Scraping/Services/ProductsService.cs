@@ -30,7 +30,7 @@ namespace Product_Scraping.Services
             foreach (var product in products)
             {
                 product.Status = Status.Imported;
-                product.ImportedT = DateTime.Now;
+                product.ImportedT = DateTime.UtcNow;
                 await _products.InsertOneAsync(product);
             }
 
