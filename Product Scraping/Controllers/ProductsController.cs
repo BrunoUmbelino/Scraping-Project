@@ -17,7 +17,7 @@ namespace Product_Scraping.Controllers
 
         // GET: /<Products>
         [HttpGet]
-        public async Task<List<Product>>  Get()
+        public async Task<List<Product>> Get()
         {
             return await _productsService.GetAllAsync();
         }
