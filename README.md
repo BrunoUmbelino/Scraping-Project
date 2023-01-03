@@ -1,6 +1,6 @@
 # Scraping Project (Backend Challenge 20220626)
 
-Este projeto é a implementa de um teste técnico, ele realiza o Web Scraping automatizado do portal "Open Food Facts" e disponibiliza os dados em uma API.
+Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts" e disponibiliza os dados em uma API.
 
 ### Tecnologias
 
@@ -11,6 +11,25 @@ Este projeto é a implementa de um teste técnico, ele realiza o Web Scraping au
 * MongoDB oficcial Driver
 * Cloud MongoDB Atlas
 * Swagger API
+
+
+### Como usar
+###### Requisito: possuir o Microsoft .Net SDK 6
+
+1_Clone o repositório e vá até a pasta do projeto
+
+    git clone https://github.com/BrunoUmbelino/Scraping-Project.git
+    cd '.\Scraping-Project\Product Scraping\'
+
+2_Compile e execute o App
+
+    dotnet build
+    dotnet run
+
+3_Abra o Swagger em seu navegador
+
+    https://localhost:7144/swagger/index.html
+
 
 ### Processo de desenvolvimento
 
@@ -35,22 +54,3 @@ Obs. não consegui implementar o passo "Para gerar a URL das imagens, revisar o 
 a, os links da documentação me respondem erro 403.
 
 ![erro403_doc_imagens_url](https://github.com/BrunoUmbelino/Scraping-Project/blob/main/Product%20Scraping/403.png)
-
-
-### Como usar
-
-###### Requisito: possuir o Microsoft .Net SDK 6
-
-1_Clone o repositório e vá até a pasta do projeto
-
-    git clone https://github.com/BrunoUmbelino/Scraping-Project.git
-    cd '.\Scraping-Project\Product Scraping\'
-
-2_Compile e execute o App
-
-    dotnet build
-    dotnet run
-
-3_Abra o Swagger em seu navegador
-
-    https://localhost:7144/swagger/index.html
