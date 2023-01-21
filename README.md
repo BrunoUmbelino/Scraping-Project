@@ -7,7 +7,7 @@ Este projeto é a implementa de um desafio da coodesh, ele realiza o Web Scrapin
 ``` [GET] "/" ```
  Devolve uma string com o nome do teste. 
 
-``` [GET] "/Products/{indexPage=1} ```
+``` [GET] "/Products/?indexPage=nº ```
  Devolve todos os produtos limitados pela página correspondente ao parámetro, cada página possui no máximo 10 items. 
 
 ``` [GET] "/Products/{code}" ```
