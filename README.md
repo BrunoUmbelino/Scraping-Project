@@ -2,6 +2,17 @@
 
 Este projeto é a implementa de um desafio da coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts", salva os dados em um banco e disponibiliza através de uma Web API.
 
+### Rotas
+
+``` [GET] "/" ```
+ Devolve uma string com o nome do teste. 
+
+``` [GET] "/Products/{indexPage=1} ```
+ Devolve todos os produtos limitados pela página correspondente ao parámetro, cada página possui no máximo 10 items. 
+
+``` [GET] "/Products/{code}" ```
+ Devolve o produto que corresponde ao "code" informado via parámetro.
+
 ### Tecnologias
 
 * ASP.NET Core Web API (.Net Framework 6)
@@ -61,6 +72,7 @@ Obs. Swagger não implementado no Container
 * Transferi o código de Scraping que anteriormente era ativado por uma Controller para o Job e deletei o Controller <br>
 * Implementei a paginação no endpoint de Produtos 
 * Refatorei o código com uma atenção especial no ScrapingService <br>
+* Estudei/revisei sobre Docker e implementei a Dockerização do app em modo de produção <br>
 
 Obs. não consegui implementar o passo "Para gerar a URL das imagens, revisar o How to do projeto em: https://wiki.openfoodfacts.org/Developer-How_To",
 a, os links da documentação me respondem erro 403.
