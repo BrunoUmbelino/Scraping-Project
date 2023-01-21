@@ -1,6 +1,6 @@
 # Scraping Project (Backend Challenge 20220626)
 
-Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts", salva os dados em um banco e disponibiliza através de uma Web API.
+Este projeto é a implementa de um desafio da coodesh, ele realiza o Web Scraping automatizado do portal "Open Food Facts", salva os dados em um banco e disponibiliza através de uma Web API.
 
 ### Tecnologias
 
@@ -14,8 +14,10 @@ Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping 
 
 
 ### Como usar
-###### Requisito: possuir o Microsoft .Net SDK 6
 
+#### Build Manual
+
+###### Requisito: possuir o Microsoft .Net SDK 6
 1_Clone o repositório e vá até a pasta do projeto
 
     git clone https://github.com/BrunoUmbelino/Scraping-Project.git
@@ -29,6 +31,16 @@ Este projeto é a implementa de um desafaio coodesh, ele realiza o Web Scraping 
 3_Abra o Swagger em seu navegador
 
     https://localhost:7144/swagger/index.html
+
+
+#### Build via Docker
+
+###### Requisito: possuir o Docker
+1_Baixe a imagem do projeto e execute o container
+
+    docker run -it --rm --name web-scraping-container -p 5000:80 -p 5002:443 brunoumbelino/web-scraping
+    
+Obs. Swagger não implementado no Container 
 
 
 ### Processo de desenvolvimento
